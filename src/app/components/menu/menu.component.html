@@ -1,0 +1,28 @@
+<!-- side me indica desde donde va a salir mi menú -->
+<!-- start para salir desde la izquierda -->
+<!-- end para salir desde la derecha -->
+<!-- menuid para relacionar este menú con el botón que abre el menú -->
+<!-- el botón ion-menu-button de inicio-->
+<!-- contentId me buscará el id principal para añadir este menú -->
+<!-- En nuestro caso lo añadiremos al router-outlet de app-component.html para cargarlo en todas nuestras páginas -->
+
+<ion-menu side="end" menuid="primerMenu" contentId="principal">
+
+    <ion-header>
+        <ion-toolbar color="danger">
+            <ion-title>Menú principal</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-menu-toggle *ngFor="let c of componentes | async">
+            <ion-list>
+                <ion-item [routerLink]="c.redirectTo" detail>
+                    <ion-icon slot="start" [name]="c.icon"></ion-icon>
+                    <ion-label>{{ c.name }}</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-menu-toggle>
+    </ion-content>
+
+</ion-menu>

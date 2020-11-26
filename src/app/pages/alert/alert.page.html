@@ -1,5 +1,11 @@
-<app-header titulo="alert"></app-header>
+<app-header [titulo]="titulo || 'Alert'"></app-header>
+<!-- {{}} texto html // [] atributos de etiquetas -->
 
 <ion-content>
-
+    <ion-button color="primary" expand="full" (click)="mostrarAlert()">
+        Mostrar Alert
+    </ion-button>
+    <ion-button color="success" expand="full" (click)="mostrarInput()">
+        Mostrar Input
+    </ion-button>
 </ion-content>

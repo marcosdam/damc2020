@@ -13,17 +13,21 @@ export class ActionSheetPage implements OnInit {
 
     ngOnInit() {
     }
-
+// Hacemos la función asíncrona porque no sabemos cuánto va a tardar en cargarla
+// para no tener la aplicación bloqueada, precargamos la función
+// y cuando tenemos todos los elementos cargados, entonces ejecutamos la función
     async mostrarActionSheet() {
         const actionSheet = await this.actionSheetCtrl.create({
-            header: 'Albums',
-            backdropDismiss: false,
-            buttons: [{
-                text: 'Delete',
-                role: 'destructive',
+            header: 'Albums',   // Título del actionSheet
+            backdropDismiss: false, // Opción para si queremos que el usuario cancele al clickar fuera
+            buttons: [{ // Array de botones
+                text: 'Delete', // Texto del botón
+                role: 'destructive', // Rol especial del botón (destructivo lo pone en rojo)
                 icon: 'trash',
                 cssClass: 'rojo',
-                handler: () => {
+                // La función flecha => es la simplificación de una función,
+                // en la que tenemos los parámetros (parámetros) => {y el contenido de la función}
+                handler: () => {    // Manejador para cuando hagan click en éste botón
                     console.log('Delete clicked');
                 }
             }, {
@@ -53,6 +57,7 @@ export class ActionSheetPage implements OnInit {
                 }
             }]
         });
+        // Una vez tengo precargado el Action Sheet, lo muestro
         await actionSheet.present();
     }
 }
