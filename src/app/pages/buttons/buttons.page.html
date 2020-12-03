@@ -1,0 +1,54 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- Primer Menú botones -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <!-- Fin primer Menú -->
+    <ion-title class="ion-text-center">Buttons</ion-title>
+
+    <!-- Segundo Menú botones -->
+    <ion-buttons slot="end">
+      <ion-button color="danger">
+        <ion-icon name="heart"></ion-icon>
+      </ion-button>
+      <ion-button color="warning">
+        <ion-icon name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- Fin Segundo Menú -->
+  </ion-toolbar>
+</ion-header>
+
+<!-- Añadimos contenido (3 botones normales) -->
+<ion-content>
+  <!-- Botones normales -->
+  <ion-button expand="full" size="small">Small</ion-button>
+  <ion-button expand="full" size="medium">Medium</ion-button>
+  <ion-button expand="full" size="large">Large</ion-button>
+
+  <!-- Botón con enlace a la página Alert -->
+  <ion-button class="ion-margin-top" expand="full" routerLink="/alert" color="tertiary">Go To Alert</ion-button>
+
+  <!-- Botón con función -->
+  <ion-button class="ion-margin-top" expand="full" color="danger" (click)="MostrarButton()">
+    Botón Función
+  </ion-button>
+
+  <!-- Botones en GRID (Angular - filas y columnas) -->
+  <ion-row class="ion-margin-top">
+    <ion-col>
+      <ion-button expand="full" routerLink="/avatar" color="tertiary">Avatar page</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="full" routerLink="/action-sheet" color="secondary">Action Sheet page</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <!-- Relleno de botones / FILL -->
+  <ion-button class="ion-margin-top" fill="clear" color="success">Clear</ion-button>
+  <ion-button class="ion-margin-top" fill="outline" color="success">Outline</ion-button>
+  <ion-button class="ion-margin-top" fill="solid" color="success">Solid</ion-button>
+
+
+</ion-content>
