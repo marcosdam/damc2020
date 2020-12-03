@@ -1,0 +1,12 @@
+<!-- Cabecera -->
+<app-header titulo="Checkbox"></app-header>
+
+<!-- Checkbox -->
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let variable of data" (click)="onClick(variable)">
+      <ion-label>{{variable.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="variable.selected" mode="ios" [color]="variable.color"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

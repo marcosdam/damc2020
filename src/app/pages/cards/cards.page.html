@@ -1,0 +1,78 @@
+<!-- Cabecera -->
+<app-header titulo="cards"></app-header>
+
+<ion-content>
+  <!-- Card sencilla estilo iOS-->
+  <ion-card color="secondary" mode="ios">
+    <!-- Cabecera de la Card -->
+    <ion-card-header>
+      <!-- Título de la Card -->
+      <ion-card-title>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        A at consectetur dignissimos doloremque excepturi expedita explicabo fugit impedit laborum,
+        necessitatibus non praesentium repellendus totam, voluptas voluptate? Dolores officia possimus sit!
+      </ion-card-title>
+      <!-- Subtítulo de la Card -->
+      <ion-card-subtitle>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusamus architecto ipsam molestias soluta. Animi, laudantium, voluptatem.
+        Accusamus architecto asperiores exercitationem iste iusto necessitatibus neque possimus,
+        quae quis, repellendus, suscipit tempora!
+      </ion-card-subtitle>
+    </ion-card-header>
+    <!-- Contenido de la Card -->
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- Card sencilla estilo iOS (para Android (Material Design) sería mode="md")-->
+  <ion-card color="secondary" mode="ios">
+    <ion-item color="primary">
+      <ion-icon color="light" slot="start" name="pin"></ion-icon>
+      <ion-label>Marcador</ion-label>
+    </ion-item>
+    <ion-card-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Aliquid, assumenda blanditiis eum molestiae nostrum porro suscipit.
+      Architecto, at beatae facilis inventore ipsam ipsum, nam neque, nostrum officia sed sint totam.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Card sencilla con imágen y texto (Estilo Google News)-->
+  <ion-card mode="ios">
+    <ion-img src="/assets/shapes.svg"></ion-img>
+    <ion-card-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Ab dicta dolorem dolores dolorum ea, eaque, incidunt ipsam ipsum itaque iure laboriosam natus
+      nemo nobis perspiciatis porro quis temporibus vero voluptatem.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- CARD EJERCICIO -->
+  <!-- Card con imágen y texto (Estilo Google News)-->
+  <ion-card mode="ios">
+    <ion-img src="/assets/cyberp.jpg"></ion-img>
+    <!-- Cabecera de la Card -->
+    <ion-card-header>
+      <!-- Subtítulo de la Card -->
+      <ion-card-subtitle color="warning">
+        De los dados a los teclados
+      </ion-card-subtitle>
+      <!-- Título de la Card -->
+      <ion-card-title>
+        Cyberpunk 2077: Sus orígenes como rol de mesa y su camino hacia el videojuego
+      </ion-card-title>
+    </ion-card-header>
+    <!-- Contenido -->
+    <ion-card-content>
+      A una semana del estreno del nuevo RPG de CD Projekt RED, exploramos sus antecedentes
+      como juegos de papel y lápiz.
+    </ion-card-content>
+    <!-- Footer ("hace 5 horas) -->
+    <ion-card-content color="medium">
+      <small>Hace 5 horas</small>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -18,5 +18,15 @@
     "icon": "radio-button-on",
     "name": "Buttons",
     "redirectTo": "/buttons"
+  },
+  {
+    "icon": "card",
+    "name": "Cards",
+    "redirectTo": "/cards"
+  },
+  {
+    "icon": "checkmark-circle-outline",
+    "name": "Checkbox",
+    "redirectTo": "/check"
   }
 ]
