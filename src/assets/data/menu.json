@@ -28,5 +28,10 @@
     "icon": "checkmark-circle-outline",
     "name": "Checkbox",
     "redirectTo": "/check"
+  },
+  {
+    "icon": "pencil-outline",
+    "name": "Ejercicio",
+    "redirectTo": "/ejercicio"
   }
 ]

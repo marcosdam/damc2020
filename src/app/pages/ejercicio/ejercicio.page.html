@@ -1,0 +1,48 @@
+<!-- Cabecera EJERCICIO-->
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button color="danger" defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons class="ion-justify-content-center">
+            <ion-button routerLink="/">
+                <ion-avatar>
+                    <ion-img src="/assets/images/Logo.svg" align="center"></ion-img>
+                </ion-avatar>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button menu="primerMenu" color="danger"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<!-- Contenido (listaElementos -> array de 4 cards) -->
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let tarjeta of listaElementos">
+            <ion-card mode="ios">
+                <ion-img src="{{tarjeta.imagen}}"></ion-img>
+                <ion-card-header>
+                    <ion-card-subtitle>{{tarjeta.autor}}</ion-card-subtitle>
+                    <ion-card-title>{{tarjeta.titulo}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>{{tarjeta.contenido}}</ion-card-content>
+                <!-- "Footer" -> (botones Compartir y Like) -->
+                <ion-card-content>
+                    <ion-buttons>
+                        <ion-button (click)="compartir(tarjeta.titulo)">
+                            <ion-icon name="share-social-outline">
+                            </ion-icon>
+                        </ion-button>
+                        <ion-button (click)="meGusta(tarjeta)">
+                            <ion-icon name="heart-outline">
+                            </ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>
