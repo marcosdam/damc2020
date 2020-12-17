@@ -1,0 +1,21 @@
+<!-- Nuestro propio header -->
+<app-header titulo="Inputs y Forms"></app-header>
+
+<ion-content>
+
+  <ion-list>
+    <!-- Cabecera -->
+    <ion-list-header>
+      <!-- Si han escrito un nombre lo ponemos, si no "No hay nombre" -->
+      <ion-label>Nombre: {{ nombre || 'No hay nombre' }}</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <!-- INPUT -->
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
