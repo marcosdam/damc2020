@@ -9,9 +9,19 @@ export class InputPage implements OnInit {
   // Creamos la var nombre
   nombre: string;
 
+  // Objeto usuario
+  usuario = {
+    email: '',
+    password: ''
+  };
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  // Func para formulario
+  enviarFormulario(formulario) {
+    console.log('Formulario enviado', formulario, this.nombre, this.usuario);
+  }
 }

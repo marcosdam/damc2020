@@ -3,19 +3,50 @@
 
 <ion-content>
 
-  <ion-list>
-    <!-- Cabecera -->
-    <ion-list-header>
-      <!-- Si han escrito un nombre lo ponemos, si no "No hay nombre" -->
-      <ion-label>Nombre: {{ nombre || 'No hay nombre' }}</ion-label>
-    </ion-list-header>
+    <ion-list>
+        <!-- Cabecera -->
+        <ion-list-header>
+            <!-- Si han escrito un nombre lo ponemos, si no "No hay nombre" -->
+            <ion-label>Nombre: {{ nombre || 'No hay nombre' }}</ion-label>
+        </ion-list-header>
 
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <!-- INPUT -->
-      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
-    </ion-item>
-  </ion-list>
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <!-- INPUT para el nombre -->
+            <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <!-- FORMULARIO para el EMAIL -->
+    <form #formulario="ngForm" (ngSubmit)="enviarFormulario(formulario)">
+        <ion-list>
+            <!-- Validar formulario -->
+            <ion-list-header>
+                <ion-label>Formulario válido? {{formulario.valid}}</ion-label>
+            </ion-list-header>
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <!-- Máscara -> Formato -> letra (1 o varias) -> @ -> letra (1 o varias) -> . -> mínimo 2 letras, máximo 5 (.es, .com)-->
+                <ion-input type="email" name="email" [(ngModel)]="usuario.email" required
+                           pattern="^([a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+                </ion-input>
+            </ion-item>
+        </ion-list>
 
 
+        <!-- INPUT para la CONTRASEÑA-->
+        <ion-list>
+            <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input type="password" name="password" [(ngModel)]="usuario.password"
+                           minlength="8" required>
+                </ion-input>
+            </ion-item>
+        </ion-list>
+
+        <ion-button type="submit" expand="full" [disabled]="formulario.invalid">
+            Enviar formulario
+        </ion-button>
+
+    </form>
 </ion-content>
