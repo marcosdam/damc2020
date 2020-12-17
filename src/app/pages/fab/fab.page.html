@@ -1,0 +1,63 @@
+<!-- Utilizamos nuestra propia cabecera-->
+<app-header titulo="Fabs"></app-header>
+
+<ion-content>
+<!-- Utilizamos el array creado en fab.page.ts-->
+  <ion-list>
+    <ion-item *ngFor="let i of data; let index=index">
+      Item {{ index + 1 }}
+    </ion-item>
+  </ion-list>
+
+  <!-- Añadir el fab (floating action button)-->
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <!-- Botón y posición -->
+    <ion-fab-button>
+      <ion-icon name="Add">
+      </ion-icon>
+    </ion-fab-button>
+    <!-- Lista de 3 botones que se abrirá al pulsar el botón del fab y
+    (hacia donde va a desplegarse) 1 hacia arriba y otra hacia la izquierda -->
+    <ion-fab-list side="top">
+      <!-- Botón Facebook -->
+      <ion-fab-button color="facebook">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <!-- Botón Youtube -->
+      <ion-fab-button color="youtube">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+      <!-- Botón Twitter -->
+      <ion-fab-button color="twitter">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+
+    </ion-fab-list>
+
+    <!-- Lista en horizontal -->
+    <ion-fab-list side="start">
+      <!-- Botón Vimeo -->
+      <ion-fab-button>
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <!-- Botón Google -->
+      <ion-fab-button>
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+      <!-- Botón Github -->
+      <ion-fab-button>
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-fab-button>
+
+    </ion-fab-list>
+
+  </ion-fab>
+
+</ion-content>
+
+<!-- Creamos footer -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Pie de página</ion-title>
+  </ion-toolbar>
+</ion-footer>

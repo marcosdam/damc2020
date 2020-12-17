@@ -38,7 +38,15 @@ const routes: Routes = [
   {
     path: 'ejercicio',
     loadChildren: () => import('./pages/ejercicio/ejercicio.module').then( m => m.EjercicioPageModule)
+  },  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
   },
+  {
+    path: 'input',
+    loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
+  },
+
 ];
 
 @NgModule({
