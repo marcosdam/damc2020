@@ -43,5 +43,10 @@
     "icon": "hammer",
     "name": "Input",
     "redirectTo": "/input"
+  },
+  {
+    "icon": "list",
+    "name": "List",
+    "redirectTo": "/list"
   }
 ]

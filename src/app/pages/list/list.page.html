@@ -1,0 +1,41 @@
+<!-- Sustituir ion header por nuestra propia header-->
+<app-header titulo="Listas y Sliding"></app-header>
+
+<ion-content>
+    <!-- Crear lista -->
+    <ion-list #lista>
+        <ion-item-sliding *ngFor="let user of usuarios | async">
+            <!-- Opciones de la izquierda -->
+            <ion-item-options side="start">
+                <!-- Favoritos -->
+                <ion-item-option (click)="favoritos(user)">
+                    <ion-icon name="heart" slot="icon-only"></ion-icon>
+                </ion-item-option>
+                <!-- Compartir -->
+                <ion-item-option color="secondary" (click)="compartir(user)">
+                    <ion-icon name="share-social" slot="icon-only"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+
+            <!-- Opciones de la derecha -->
+            <ion-item-options>
+                <!-- Borrar -->
+                <ion-item-option color="danger" (click)="borrar(user)">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+
+            <!-- ngFor para usuarios de data.service.ts -->
+            <ion-item>
+                <ion-label>
+                    <h3>{{ user.name }}</h3>
+                    <p>{{ user.email }}</p>
+                </ion-label>
+                <ion-label slot="end" class="ion-text-right">
+                    {{ user.phone }}
+                </ion-label>
+            </ion-item>
+
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
