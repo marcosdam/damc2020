@@ -24,7 +24,7 @@ const routes: Routes = [
             },
             {
                 path: 'settings',
-                loadChildren: '../card/card.module#CardPageModule'
+                loadChildren: '../cards/cards.module#CardsPageModule'
             }
         ]
     }
