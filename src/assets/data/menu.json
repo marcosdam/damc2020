@@ -53,5 +53,10 @@
     "icon": "reorder-two",
     "name": "Listas y Reorder",
     "redirectTo": "/list-reorder"
+  },
+  {
+    "icon": "cog",
+    "name": "Tabs",
+    "redirectTo": "/tabs"
   }
 ]

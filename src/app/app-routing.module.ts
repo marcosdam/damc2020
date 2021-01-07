@@ -54,6 +54,10 @@ const routes: Routes = [
     path: 'list-reorder',
     loadChildren: () => import('./pages/list-reorder/list-reorder.module').then( m => m.ListReorderPageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
 
 ];
 
