@@ -1,0 +1,17 @@
+<app-header titulo="Listas y Reorder"></app-header>
+
+<ion-content>
+<!-- Crear lista con los elementos del .ts -->
+  <ion-list>
+
+    <!-- Reordenar la lista (reorder group) con la función reorder que creamos en el .ts -->
+    <ion-reorder-group [disabled]="false" (ionItemReorder)="reorder($event)">
+      <ion-item *ngFor="let personaje of personajes">
+        <ion-label> {{ personaje }} </ion-label>
+        <!-- ion-reorder para reordenar elementos -->
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+
+  </ion-list>
+</ion-content>

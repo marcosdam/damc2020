@@ -48,5 +48,10 @@
     "icon": "list",
     "name": "List",
     "redirectTo": "/list"
+  },
+  {
+    "icon": "reorder-two",
+    "name": "Listas y Reorder",
+    "redirectTo": "/list-reorder"
   }
 ]
