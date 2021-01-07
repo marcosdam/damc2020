@@ -25,11 +25,12 @@ export class ListPage implements OnInit {
   }
 
   // func Toast
-  async presentarToast(message: string) {
+  async presentarToast(message: string, header: string, color: string) {
     const toast = await this.toastCtrl.create({
-      header: 'string',
-      color: 'success',
+      header,
       message,
+      color,
+      animated: true,
       duration: 2000,
       position: 'middle'
     });
@@ -39,21 +40,21 @@ export class ListPage implements OnInit {
   // func Favoritos
     favoritos(user: any) {
     console.log('Favoritos', user);
-    this.presentarToast('Añadido a favoritos con éxito');
+    this.presentarToast('Añadido a favoritos con éxito', 'Favoritos', 'success');
     this.lista.closeSlidingItems();
   }
 
   // func Compartir
     compartir(user: any) {
     console.log('Compartir', user);
-    this.presentarToast('Compartido con éxito');
+    this.presentarToast('Elemento compartido', 'Compartir', 'secondary');
     this.lista.closeSlidingItems();
   }
 
   // func Borrar
     borrar(user: any) {
       console.log('Borrar', user);
-      this.presentarToast('Eliminado con éxito');
+      this.presentarToast('Eliminado con éxito', 'Borrar', 'danger');
       this.lista.closeSlidingItems();
     }
 }
