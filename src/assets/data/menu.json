@@ -70,7 +70,7 @@
     "redirectTo": "/progressbar"
   },
   {
-    "icon": "arrow-round-down",
+    "icon": "arrow-down",
     "name": "Refresher",
     "redirectTo": "/refresher"
   }
