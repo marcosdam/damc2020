@@ -58,5 +58,15 @@
     "icon": "cog",
     "name": "Tabs",
     "redirectTo": "/tabs"
+  },
+  {
+    "icon": "infinite",
+    "name": "Infinite Scroll",
+    "redirectTo": "/infinite-scroll"
+  },
+  {
+    "icon": "code-working",
+    "name": "Progress Bar y ion Range",
+    "redirectTo": "/progressbar"
   }
 ]
