@@ -83,5 +83,10 @@
     "icon": "flame",
     "name": "Popover",
     "redirectTo": "/popover"
+  },
+  {
+    "icon": "phone-portrait",
+    "name": "Modal",
+    "redirectTo": "/modal"
   }
 ]

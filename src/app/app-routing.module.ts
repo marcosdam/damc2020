@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'ejercicio',
     loadChildren: () => import('./pages/ejercicio/ejercicio.module').then( m => m.EjercicioPageModule)
-  },  {
+  },
+  {
     path: 'fab',
     loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
   },
@@ -78,6 +79,14 @@ const routes: Routes = [
     path: 'popover',
     loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
   },
+  {
+    path: 'modal',
+    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
+  },
+  /*{
+    path: 'modal-info',
+    loadChildren: () => import('./pages/modal-info/modal-info.module').then( m => m.ModalInfoPageModule)
+  },*/
 
 ];
 
