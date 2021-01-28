@@ -23,5 +23,7 @@ export class PopoverPage implements OnInit {
           backdropDismiss: false
         });
         await popover.present();
+        const {data} = await popover.onWillDismiss(); // Lo recibe de onClick() en popinfo.component.ts
+        console.log('Info: ', data);
     }
 }
