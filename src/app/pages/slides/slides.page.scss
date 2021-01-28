@@ -1,0 +1,33 @@
+.slide-full{
+  height: 100% !important;
+}
+
+// sobreescribimos clase ion-card
+ion-card{
+  overflow: unset !important;
+
+  height: 200px;
+  width: 300px;
+}
+
+slide-image{
+  width: 100px;
+  text-align: center;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.slide-image, ion-card-header, ion-card-content{
+  position: relative;
+  top: -150px;
+}
+
+.avatar{
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

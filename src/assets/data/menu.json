@@ -73,5 +73,15 @@
     "icon": "arrow-down",
     "name": "Refresher",
     "redirectTo": "/refresher"
+  },
+  {
+    "icon": "albums",
+    "name": "Slides",
+    "redirectTo": "/slides"
+  },
+  {
+    "icon": "flame",
+    "name": "Popover",
+    "redirectTo": "/popover"
   }
 ]
