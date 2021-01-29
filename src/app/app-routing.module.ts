@@ -91,6 +91,10 @@ const routes: Routes = [
     path: 'searchbar',
     loadChildren: () => import('./pages/searchbar/searchbar.module').then( m => m.SearchbarPageModule)
   },
+  {
+    path: 'datetime',
+    loadChildren: () => import('./pages/datetime/datetime.module').then( m => m.DatetimePageModule)
+  },
   /*{
     path: 'modal-info',
     loadChildren: () => import('./pages/modal-info/modal-info.module').then( m => m.ModalInfoPageModule)
