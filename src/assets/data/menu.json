@@ -88,5 +88,15 @@
     "icon": "phone-portrait",
     "name": "Modal",
     "redirectTo": "/modal"
+  },
+  {
+    "icon": "refresh-circle",
+    "name": "Loading",
+    "redirectTo": "/loading"
+  },
+  {
+    "icon": "search",
+    "name": "Search Bar",
+    "redirectTo": "/searchbar"
   }
 ]

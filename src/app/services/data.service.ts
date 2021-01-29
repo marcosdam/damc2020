@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Componente} from '../interfaces/interfaces';
+import * as https from 'https';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,9 @@ export class DataService {
     getUsers(){
       return this.http.get('https://jsonplaceholder.typicode.com/users');
     }
+
+    //
+  getAlbums(){
+    return this.http.get('http://jsonplaceholder.typicode.com/albums');
+  }
 }
